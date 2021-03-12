@@ -8,7 +8,7 @@ import os
 urllib3.disable_warnings()
 
 # note.youdao.com 有道云笔记签到
-
+print(os)
 user=""
 passwd=""
 sckey = os.environ["SCKEY"]
