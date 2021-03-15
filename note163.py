@@ -57,7 +57,7 @@ def noteyoudao(YNOTE_SESS: str, user: str, passwd: str, sckey: str):
         else:
             print(user+'登陆成功，更新YNOTE_SESS,重新签到')
             YNOTE_SESS = x[0]
-            noteyoudao(YNOTE_SESS, user, passwd)
+            noteyoudao(YNOTE_SESS, user, passwd, sckey)
             return YNOTE_SESS
 
 if __name__ == "__main__":
