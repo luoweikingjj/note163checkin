@@ -29,6 +29,7 @@ jobs:
       run: |
         user='${{ secrets.USER }}'
         pwd='${{ secrets.PWD }}'
+        sckey='${{ secrets.SCKEY }}'
         
         
         user_list=()
