@@ -34,6 +34,7 @@ def noteyoudao(YNOTE_SESS: str, user: str, passwd: str, sckey: str):
                           time.localtime(info['time'] / 1000))
         text = user+'签到成功，本次获取'+str(space) + 'M, 总共获取'+str(total)+'M, 签到时间'+str(t)
         print(text)
+        print('https://sc.ftqq.com/' + sckey + '.send?text='+text)
         requests.get('https://sc.ftqq.com/' + sckey + '.send?text='+text)
     # cookie 登录失效，改用用户名密码登录
     else:
