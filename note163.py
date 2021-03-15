@@ -3,7 +3,6 @@ import sys
 import json
 import time
 import urllib3
-import os
 
 urllib3.disable_warnings()
 
@@ -11,13 +10,15 @@ urllib3.disable_warnings()
 print(os)
 user=""
 passwd=""
+sckey=""
 
 if(user=="",passwd==""):
     user = input("账号:")
     passwd = input("密码:")
+    sckey = input("sckey:")
 
     
-def noteyoudao(YNOTE_SESS: str, user: str, passwd: str):
+def noteyoudao(YNOTE_SESS: str, user: str, passwd: str, sckey: str):
     s = requests.Session()
     checkin_url = 'http://note.youdao.com/yws/mapi/user?method=checkin'
     cookies = {
@@ -61,5 +62,5 @@ def noteyoudao(YNOTE_SESS: str, user: str, passwd: str):
             return YNOTE_SESS
 
 if __name__ == "__main__":
-    noteyoudao("",user,passwd)
+    noteyoudao("",user,passwd,sckey)
 
