@@ -11,7 +11,6 @@ urllib3.disable_warnings()
 print(os)
 user=""
 passwd=""
-sckey = os.environ["SCKEY"]
 
 if(user=="",passwd==""):
     user = input("账号:")
@@ -35,7 +34,7 @@ def noteyoudao(YNOTE_SESS: str, user: str, passwd: str):
                           time.localtime(info['time'] / 1000))
         text = user+'签到成功，本次获取'+str(space) + 'M, 总共获取'+str(total)+'M, 签到时间'+str(t)
         print(text)
-        # requests.get('https://sc.ftqq.com/' + sckey + '.send?text='+text)
+        requests.get('https://sc.ftqq.com/' + sckey + '.send?text='+text)
     # cookie 登录失效，改用用户名密码登录
     else:
         login_url = 'https://note.youdao.com/login/acc/urs/verify/check?app=web&product=YNOTE&tp=ursto' \
