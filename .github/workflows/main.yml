@@ -56,5 +56,6 @@ jobs:
         python3 note163.py <<EOF
         ${user_list[$i]}
         ${pwd_list[$i]}
+        sckey
         EOF
         done
